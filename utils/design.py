@@ -19,8 +19,8 @@ def plotly_main_layout(fig: go.Figure, width=700, height=600, x=None, y=None, ti
         height=height,
         plot_bgcolor=paper_color,
         paper_bgcolor=paper_color,
-        xaxis={'gridcolor': '#cccccc', 'linecolor': 'black', 'title': x, 'range': x_range},
-        yaxis={'gridcolor': '#cccccc', 'linecolor': 'black', 'title': y, 'range': y_range},
+        xaxis={'gridcolor': '#cccccc', 'linecolor': 'black', 'zerolinecolor': '#BABABA', 'title': x, 'range': x_range},
+        yaxis={'gridcolor': '#cccccc', 'linecolor': 'black', 'zerolinecolor': '#BABABA', 'title': y, 'range': y_range},
         title={'text': title},
     )
     
@@ -65,6 +65,7 @@ def plotly_main_subplot_layout(fig:go.Figure, width=1400, height=500, title=None
         xaxis.update(
             showgrid=True,
             gridcolor='#CCCCCC',
+            zerolinecolor='#BABABA',
             linecolor='black',
             title=x,
             range=x_range
@@ -73,6 +74,7 @@ def plotly_main_subplot_layout(fig:go.Figure, width=1400, height=500, title=None
         yaxis.update(
             showgrid=True,
             gridcolor='#CCCCCC',
+            zerolinecolor='#BABABA',
             linecolor='black',
             title=y,
             range=y_range
